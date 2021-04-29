@@ -15,10 +15,10 @@ jobs:
         with:
           java-version: adopt@1.11
       - name: Build Native Image
-        run: csbt nativeImage
+        run: sbt nativeImage
       - name: Run Native Image
         run: |
           echo "Running native image"
-          pid=$(csbt nativeImageRun &)
+          pid=$(sbt nativeImageRun &)
           sleep 5
           kill pid
