@@ -12,5 +12,5 @@ lazy val root = (project in file("."))
     Compile / mainClass := Some("example.MonixHello"),
     libraryDependencies += scalaTest % Test,
     libraryDependencies += "io.monix" %% "monix" % "3.2.2",
-    nativeImageOptions ++= Seq("--no-fallback"),
+    nativeImageOptions ++= Seq("--no-fallback","--initialize-at-run-time=monix.execution.internal.jctools"),
   )
