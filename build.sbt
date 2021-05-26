@@ -15,6 +15,6 @@ lazy val root = (project in file("."))
     nativeImageOptions ++= Seq(
       "--no-fallback",
       "--allow-incomplete-classpath",
-      "--initialize-at-run-time=monix.execution.internal.jctools,org.jctools"
+      "--initialize-at-run-time=org.jctools"
     )
   )
